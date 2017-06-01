@@ -4,7 +4,8 @@
   "description": "",
   "main": "entry.js",
   "scripts": {
-    "test": ""
+    "build": "webpack",
+    "build-watch": "webpack-dev-server --inline --hot"
   },
   "keywords": [],
   "author": "",
@@ -27,6 +28,7 @@
     "pascalcase": "^0.1.1",
     "resolve-url-loader": "^2.0.2",
     "sass-loader": "^6.0.5",
+    "style-loader": "^0.18.1",
     "url-loader": "^0.5.8",
     "webpack": "^2.6.1"
   },

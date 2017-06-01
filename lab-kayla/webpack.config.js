@@ -52,7 +52,7 @@ module.exports = {
       },
       {
         test: /\.(eot|ttf|woff|svg).*/,
-        use: 'url?limit=10000&name=image/[hash].[ext]'
+        use: 'file-loader'
       },
       {
         test: /\.scss$/,
