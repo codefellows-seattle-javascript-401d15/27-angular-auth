@@ -1,6 +1,8 @@
 'use strict'
 
-module.exports = ['$log', function($log) {
+module.exports = ['$log', HomeController]
+
+function HomeController($log) {
   $log.debug('HomeController')
-  this.title = 'Welcome to the Homepage'
-}]
+  // this.title = 'Welcome to the Homepage'
+}

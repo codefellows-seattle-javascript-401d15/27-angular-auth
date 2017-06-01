@@ -2,8 +2,8 @@
   <div
     ng-if="landingCtrl.showSignup">
     <div>
-      <signup></signup>
-      <p>already a member?</p>
+      <login-controller></login-controller>
+      <p>Already a member?</p>
       <a href="/#!/join#join"
       ng-click="landingCtrl.showSignup=false">
       Sign-in Here
@@ -14,7 +14,7 @@
   <div
   ng-if="!landingCtrl.showSignup">
   <div>
-    <login></login>
+    <signup-controller></signup-controller>
     <p>Want to sign up?</p>
     <a href="/#/join#signup"
     ng-click="landingCtrl.showSignup=true">
