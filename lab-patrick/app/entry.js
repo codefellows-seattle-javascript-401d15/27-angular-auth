@@ -1,4 +1,3 @@
-
 'use strict';
 
 require('./scss/reset.scss');
