@@ -23,6 +23,13 @@ function routerConfig($stateProvider, $urlRouterProvider) {
       controller: 'LandingController',
       controllerAs: 'landingCtrl',
     },
+    {
+      name: 'signup',
+      url: '/join#signup',
+      template: require('../component/landing/signup/signup.html'),
+      controller: 'SignupController',
+      controllerAs: 'signupCtrl',
+    },
   ];
 
   routes.forEach($stateProvider.state);
