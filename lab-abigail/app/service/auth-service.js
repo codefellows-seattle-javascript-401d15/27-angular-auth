@@ -43,13 +43,13 @@ module.exports = [
     service.signup = function(user) {
       $log.debug('authService.signup()');
 
-      let url = `${__API_URL__}/api/signup`
+      let url = `${__API_URL__}/api/signup`;
       let config = {
         headers: {
           'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        }
-      }
+          'Accept': 'application/json',
+        },
+      };
 
       return $http.post(url, user, config)
       .then(res => {
