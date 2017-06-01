@@ -4,11 +4,6 @@
 # CFgram: Abs' Gallery App
 This application allows users to create accounts, add, and store personal images. This app persists user login information.
 
-## Run Test
-In terminal tab, enter:
-1. `npm install` to install application resources.
-2. `npm run test` to run tests using jasmine.
-
 ## Open Website in Browser
 In terminal tab, enter:
 1. `npm install` to install application resources.
@@ -19,13 +14,17 @@ In terminal tab, enter:
 ## Login and Sign Up functionality with MongoDB
 1. In terminal tab, enter `mongod`
 2. In new tab, enter `mongo`
-  * To view dbs, enter `show dbs`
-  * To use local dbs, enter `use cfgram-backend`
-  * To `show collections`
-  * To view dbs, enter `db.users.find()`
-  * To clear dbs, enter `db.users.drop()`
+* To view dbs, enter `show dbs`
+* To use local dbs, enter `use cfgram-backend`
+* To `show collections`
+* To view dbs, enter `db.users.find()`
+* To clear dbs, enter `db.users.drop()`
 
-
+## Run Test
+In terminal tab, enter:
+1. `npm install` to install application resources.
+2. `npm run test` to run tests using jasmine.
+--------------------
 ## Application Resources
 * "angular"
 * "babel-core"
