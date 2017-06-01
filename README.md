@@ -65,7 +65,7 @@
     * each view should have its own controller
     * the `/#/` view should be the default landing page
     * the landing page markup should contain `<signup>` and `<login>` components
-  * Create an auth service with for making `http` requests to the `slugram-backend` application
+  * Create an auth service for making `http` requests to the `slugram-backend` application
     * this should have contain methods for sign up and sign in routes
     * this should have methods to `get` and `delete` a token from local storage
   * Create a sign up component
