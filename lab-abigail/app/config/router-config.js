@@ -1,12 +1,13 @@
-'use strict';
 
-module.exports = ['$stateProvider', '$urlRouterProvider', routerConfig];
+'use strict'
+
+module.exports = ['$stateProvider', '$urlRouterProvider', routerConfig]
 
 function routerConfig($stateProvider, $urlRouterProvider) {
-  $urlRouterProvider.when('', '/home');
-  $urlRouterProvider.when('/', '/join#signup');
-  $urlRouterProvider.when('/signup', '/join#signup');
-  $urlRouterProvider.when('/login', '/join#login');
+  $urlRouterProvider.when('', '/home')
+  $urlRouterProvider.when('/', '/join#signup')
+  $urlRouterProvider.when('/signup', '/join#signup')
+  $urlRouterProvider.when('/login', '/join#login')
 
   let routes = [
     {
@@ -25,6 +26,5 @@ function routerConfig($stateProvider, $urlRouterProvider) {
     }
   ]
 
-  routes.forEach($stateProvider.state);
-
+  routes.forEach($stateProvider.state)
 }

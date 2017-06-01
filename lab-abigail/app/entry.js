@@ -10,7 +10,7 @@ const uiRouter = require('@uirouter/angularjs');
 
 const cfgram = angular.module('cfgram', ['ui.router']);
 
-let conext = require.context('./config/', true, /\.js$/);
+let context = require.context('./config/', true, /\.js$/);
 context.keys().forEach( path => cfgram.config(context(path)));
 
 context = require.context('./view/', true, /\.js$/);
@@ -19,5 +19,5 @@ context.keys().forEach( key => cfgram.controller(pascalcase(path.basename(key, '
 context = require.context('./service/', true, /\.js$/);
 context.keys().forEach( key => cfgram.service(camelcase(path.basename(key, '.js')), context(key)));
 
-contect = require.context('./component/', true, /\.js$/);
+context = require.context('./component/', true, /\.js$/);
 context.keys().forEach( key => cfgram.component(camelcase(path.basename(key, '.js')), context(key)));
