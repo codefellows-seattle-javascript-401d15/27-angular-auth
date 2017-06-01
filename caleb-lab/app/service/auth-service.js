@@ -1,4 +1,3 @@
-
 'use strict'
 
 module.exports = [
@@ -34,16 +33,13 @@ module.exports = [
 
     service.logout = function() {
       $log.debug('authService.logout()')
-
       $window.localStorage.removeItem('token')
       token = null
-
       return $q.resolve()
     }
 
     service.signup = function(user) {
       $log.debug('authService.signup()')
-
       let url = `${__API_URL__}/api/signup`
       let config = {
         headers: {
@@ -51,7 +47,6 @@ module.exports = [
           'Accept': 'application/json'
         }
       }
-
       return $http.post(url, user, config)
       .then(res => {
         $log.log('success', res.data)
@@ -65,7 +60,6 @@ module.exports = [
 
     service.login = function(user) {
       $log.debug('authService.login()')
-
       let url = `${__API_URL__}/api/login`
       let base64 = $window.btoa(`${user.username}:${user.password}`)
       let config = {
@@ -85,7 +79,6 @@ module.exports = [
         return $q.reject(err)
       })
     }
-
     return service
   }
 ]
