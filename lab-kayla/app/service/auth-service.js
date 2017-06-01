@@ -5,42 +5,41 @@ module.exports = [
   '$log',
   '$http',
   '$window',
-  function($q, $log, $http, $window) {
-    $log.debug('Auth-Service')
+  function($q, $log, $http, $window, authService) {
+    $log.debug('authService')
 
     let service = {}
     let token = null
 
     function setToken(_token) {
-      $log.debug('#setToken')
-      if(!_token) return $q.reject(new Error('no token provided'))
+      $log.debug('authService.setToken()')
 
+      if(!_token) return $q.reject(new Error('no token provided'))
       $window.localStorage.setItem('token', _token)
       token = _token
       return $q.resolve(token)
     }
 
     service.getToken = function() {
-      $log.debug('#getToken')
+      $log.debug('authService.getToken()')
 
       if(token) return $q.resolve(token)
-
-      token = $window.localStorage.getItem(token)
+      token = $window.localStorage.getItem('token')
       if(token) return $q.resolve(token)
 
-      return $q.reject(new Error('no token'))
+      return $q.reject(new Error('Token not found'))
     }
 
     service.logout = function() {
-      $log.debug('#logout')
+      $log.debug('authService.logout()')
 
       $window.localStorage.removeItem('token')
       token = null
-      $q.resolve(token)
 
+      return $q.resolve()
     }
     service.signup = function(user) {
-      $log.debug('#signup')
+      $log.debug('authService.signup()')
 
       let url = `${__API_URL__}/api/signup`
       let config = {
@@ -56,19 +55,19 @@ module.exports = [
         return setToken(res.data)
       })
       .catch(err => {
-        $log.error('fail', err.message)
+        $log.error('fail', err)
         return $q.reject(err)
       })
     }
     service.login = function(user) {
-      $log.debug('#login')
+      $log.debug('authService.login()')
 
       let url = `${__API_URL__}/api/login`
       let base64 = $window.btoa(`${user.username}:${user.password}`)
       let config = {
         headers: {
-          'Accept': 'application/json',
-          'Authorization': `Basic ${base64}`
+          Accept: 'application/json',
+          Authorization: `Basic ${base64}`
         }
       }
       return $http.get(url, config)

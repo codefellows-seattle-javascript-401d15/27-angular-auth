@@ -1,5 +1,9 @@
 'use strict'
 
-module.exports = ['$log', function($log) {
-  $log.debug('HomeController')
-}]
+require('./_home.scss')
+
+module.exports = ['$log', HomeController]
+
+function HomeController($log) {
+  $log.debug('HomeController()')
+}
