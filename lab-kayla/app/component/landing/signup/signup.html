@@ -1,5 +1,6 @@
 <section class="signup">
-  <form class="signup-form"
+  <div class="form-container">
+    <form class="signup-form"
     ng-submit="signupCtrl.signup(signupCtrl.user)"
     novalidate>
 
@@ -24,7 +25,9 @@
       ng-model="signupCtrl.user.password"
       required>
     </div>
-
-    <div><input type="submit" value="sign up"></div>
+  </div>
+    <div class="signup-button">
+      <button ng-click="signupCtrl.signup(signupCtrl.user)">sign up</button>
+    </div>
   </form>
 </section>
