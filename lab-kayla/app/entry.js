@@ -8,6 +8,8 @@ const pascalcase = require('pascalcase')
 const angular = require('angular')
 const uiRouter = require('@uirouter/angularjs')
 
+const slugram= angular.module('slugram', ['ui.router'])
+
 const cfgram = angular.module('cfgram', ['ui.router'])
 
 let context = require.context('./config/', true, /\.js$/)
