@@ -1,12 +1,12 @@
 'use strict';
-require('./scss/main.scss');
-require('./scss/reset.scss');
+
+require('./scss/base/main.scss');
+// require('./scss/layout/reset.scss');
 
 const path = require('path');
 const camelcase = require('camelcase');
 const pascalcase = require('pascalcase');
 const angular = require('angular');
-
 require('@uirouter/angularjs');
 
 const cfgram = angular.module('cfgram', ['ui.router']);
