@@ -5,11 +5,16 @@ module.exports = [
   '$log',
   '$http',
   '$window',
-  function($q, $log, $http, $window, authService) {
+  authService ]
+
+  function authService($q, $log, $http, $window) {
     $log.debug('authService');
+
+
 
     let service = {};
     let token = null;
+
 
     function setToken(_token) {
       $log.debug('authService.setToken()');
@@ -39,6 +44,7 @@ module.exports = [
 
       return $q.resolve();
     };
+    $log.log(service.logout, '-----service.logout');
 
     service.signup = function(user) {
       $log.debug('authService.signup()');
@@ -72,8 +78,9 @@ module.exports = [
           Accept: 'application/json',
           Authorization: `Basic ${base64}`,
         },
-      }
+      };
 
+      return $http.get(url, config)
       .then(res => {
         $log.log('success', res.data);
         return setToken(res.data);
@@ -85,5 +92,4 @@ module.exports = [
     };
 
     return service;
-  },
-];
+  };
