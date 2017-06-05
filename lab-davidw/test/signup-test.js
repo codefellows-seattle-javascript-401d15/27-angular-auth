@@ -1,7 +1,7 @@
 'use strict';
 
-const angular = require('angular');
-require('angular-mocks');
+// const angular = require('angular');
+// require('angular-mocks');
 
 describe('testing signup', function(){
   beforeEach(() => {

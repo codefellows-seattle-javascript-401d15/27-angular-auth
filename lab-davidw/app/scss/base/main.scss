@@ -51,10 +51,12 @@ body {
   font-size: $font-size-primary;
   background: linear-gradient($brand-secondary, $brand-primary);
   height: 90vh;
-  width: 100%
+  width: 100vw
 }
 
 #logo {
+  margin-left: 1em;
+  float: left;
   display: block;
   height: 90%;
   margin: auto;
@@ -62,10 +64,9 @@ body {
 
 h1 {
   width: 100%;
-  float: left;
   font-size: 5vw;
   text-align: left;
-  margin-bottom: $gutter-std;
+  margin-top: $gutter-std;
   padding-right: 60%;
 }
 
