@@ -18,9 +18,7 @@ $font-size-primary: 2.5vw;
 @mixin link {
   color: $black;
   text-decoration: none;
-  font-style: oblique;
   &:hover {
-    background-color: $grey;
     color: $white;
   }
 }
@@ -52,7 +50,14 @@ body {
   font-family: 'Indie Flower', cursive;
   font-size: $font-size-primary;
   background: linear-gradient($brand-secondary, $brand-primary);
-  height: 83vh;
+  height: 90vh;
+  width: 100%
+}
+
+#logo {
+  display: block;
+  height: 90%;
+  margin: auto;
 }
 
 h1 {
