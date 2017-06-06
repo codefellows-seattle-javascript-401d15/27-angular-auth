@@ -12,7 +12,6 @@ module.exports = [
 
     function setToken(_token) {
       $log.debug('authService.setToken()');
-      console.log('WTFTOKEN?!', _token);
 
       if(!_token) return $q.reject(new Error('No token'));
       $window.localStorage.setItem('token', _token);
@@ -39,7 +38,7 @@ module.exports = [
 
       return $q.resolve();
     };
-    
+
     service.signup = function(user) {
       $log.debug('authService.signup()');
 

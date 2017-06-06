@@ -50,8 +50,8 @@ body {
   font-family: 'Indie Flower', cursive;
   font-size: $font-size-primary;
   background: linear-gradient($brand-secondary, $brand-primary);
-  height: 90vh;
-  width: 100vw
+  height: 99vh;
+  width: 99vw
 }
 
 #logo {
@@ -67,7 +67,6 @@ h1 {
   font-size: 5vw;
   text-align: left;
   margin-top: $gutter-std;
-  padding-right: 60%;
 }
 
 h2 {
@@ -88,7 +87,7 @@ a {
 
 footer {
   background-color: $brand-primary;
-  width: 100vw;
+  width: 98vw;
   max-height: 8vmin;
   min-height: 5vmax;
   padding: .5vw;
@@ -127,7 +126,7 @@ footer {
 }
 
 .guide {
-  margin-left: 64%;
+  margin-left: 60%;
   display: inline;
 }
 
