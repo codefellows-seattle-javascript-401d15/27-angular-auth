@@ -33,15 +33,19 @@ AWS_SECRET_ACCESS_KEY='<your secret key>'
     `
         $ npm install
     `  
-4. Run the server:
+4. Run the server (with debug):
     `
-        $ node run server.js
+        $ npm run start-debug
     `
-5. Run the front end (with debug):
+5. Run the server:
+    `
+        $ npm run start
+    `
+6. Run the front end (with debug):
     `
         $ npm run build-watch
     `
- Alternately you can just build the web pack:
+ *-or- you can just build the web pack:*
     `
         $ npm run build
     `
@@ -49,3 +53,16 @@ AWS_SECRET_ACCESS_KEY='<your secret key>'
     `
         $ npm run test
     `
+7. Open the website wherever you have it hosted.
+- locally hosted example url:` http://localhost:8080/ `
+
+### From the front end:
+- You can Sign up for "cfGram", the app.
+  - You will be taken to Home, upon sign up.
+- On subsequent visits, you can sign in, to be taken to home.
+
+##### Upcoming features:
+- logout
+- create a Gallery
+- add photos to an S3 bucket
+- and display the same images in the Gallery
