@@ -7,7 +7,6 @@ module.exports = [
   '$window',
   function($q, $log, $http, $window, authService) {
     $log.debug('authService');
-
     let service = {};
     let token = null;
 
@@ -40,7 +39,7 @@ module.exports = [
 
       return $q.resolve();
     };
-
+    
     service.signup = function(user) {
       $log.debug('authService.signup()');
 
@@ -48,16 +47,18 @@ module.exports = [
       let config = {
         headers: {
           'Content-Type': 'application/json',
-          'Accept': 'application/json',
+          Accept: 'application/json',
         },
       };
 
+      $log.log('my token: ', token);
       return $http.post(url, user, config)
       .then(res => {
         $log.log('success', res.data);
         return setToken(res.data);
       })
       .catch(err => {
+        $log.error('this is the response object', res);
         $log.error('failure', err);
         return $q.reject(err);
       });
